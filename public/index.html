@@ -1,0 +1,12 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/superagent/3.8.3/superagent.min.js"></script>
+<h1>asynchronous</h1>
+
+<script>
+  const url = '/account/create/tyler/tyler@email.com/secret';
+
+  async function createAwait() {
+    const res = await fetch(url);
+    const data = await res.json();
+    return data;
+  }
+</script>
