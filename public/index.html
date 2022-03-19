@@ -13,4 +13,16 @@
   function invoke01() {
     createAwait().then(data => console.log('data:', data));
   }
+
+  function createSuperagentPromise() {
+    superagent
+      .get(url)
+      .end(function(err, res) {
+        return (res.body);
+      });
+  }
+
+  function invoke02() {
+    console.log('response:', createSuperagentPromise());
+  }
 </script>
