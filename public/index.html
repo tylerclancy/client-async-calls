@@ -15,14 +15,11 @@
   }
 
   function createSuperagentPromise() {
-    superagent
-      .get(url)
-      .end(function(err, res) {
-        return (res.body);
-      });
+    return superagent.get(url);
   }
 
   function invoke02() {
-    console.log('response:', createSuperagentPromise());
+    createSuperagentPromise()
+      .then(response => console.log('response:', response.body));
   }
 </script>
