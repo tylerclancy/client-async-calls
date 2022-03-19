@@ -10,7 +10,7 @@
     return data;
   }
 
-  async function invoke01() {
-    console.log('response:', await createAwait());
+  function invoke01() {
+    createAwait().then(data => console.log('data:', data));
   }
 </script>
